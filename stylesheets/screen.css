@@ -1,0 +1,501 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* line 1, ../sass/_base.scss */
+body {
+  background: #f0d5b8; }
+
+/* line 4, ../sass/_base.scss */
+a {
+  text-decoration: none;
+  color: white; }
+  /* line 7, ../sass/_base.scss */
+  a:hover {
+    color: #081709; }
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/fontawesome.eot");
+  src: url("../fonts/fontawesome.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome.woff") format("woff"), url("../fonts/fontawesome.ttf") format("truetype"), url("../fonts/fontawesome.svg#fontawesome") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+/* line 13, ../sass/_fonts.scss */
+[data-icon]:before {
+  font-family: 'fontawesome';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+/* line 30, ../sass/_fonts.scss */
+.icon-music, .icon-envelope, .icon-remove, .icon-signal, .icon-play-circle, .icon-headphones, .icon-volume-off, .icon-volume-down, .icon-volume-up, .icon-step-backward, .icon-fast-backward, .icon-backward, .icon-play, .icon-pause, .icon-stop, .icon-forward, .icon-fast-forward, .icon-step-forward, .icon-chevron-left, .icon-chevron-right, .icon-chevron-up, .icon-chevron-down, .icon-facebook, .icon-envelope-alt, .icon-angle-left, .icon-angle-right, .icon-angle-up, .icon-angle-down, .icon-quote-left, .icon-quote-right, .icon-euro {
+  font-family: 'fontawesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 40, ../sass/_fonts.scss */
+.icon-music:before {
+  content: "\f001"; }
+
+/* line 43, ../sass/_fonts.scss */
+.icon-envelope:before {
+  content: "\f003"; }
+
+/* line 46, ../sass/_fonts.scss */
+.icon-remove:before {
+  content: "\f00d"; }
+
+/* line 49, ../sass/_fonts.scss */
+.icon-signal:before {
+  content: "\f012"; }
+
+/* line 52, ../sass/_fonts.scss */
+.icon-play-circle:before {
+  content: "\f01d"; }
+
+/* line 55, ../sass/_fonts.scss */
+.icon-headphones:before {
+  content: "\f025"; }
+
+/* line 58, ../sass/_fonts.scss */
+.icon-volume-off:before {
+  content: "\f026"; }
+
+/* line 61, ../sass/_fonts.scss */
+.icon-volume-down:before {
+  content: "\f027"; }
+
+/* line 64, ../sass/_fonts.scss */
+.icon-volume-up:before {
+  content: "\f028"; }
+
+/* line 67, ../sass/_fonts.scss */
+.icon-step-backward:before {
+  content: "\f048"; }
+
+/* line 70, ../sass/_fonts.scss */
+.icon-fast-backward:before {
+  content: "\f049"; }
+
+/* line 73, ../sass/_fonts.scss */
+.icon-backward:before {
+  content: "\f04a"; }
+
+/* line 76, ../sass/_fonts.scss */
+.icon-play:before {
+  content: "\f04b"; }
+
+/* line 79, ../sass/_fonts.scss */
+.icon-pause:before {
+  content: "\f04c"; }
+
+/* line 82, ../sass/_fonts.scss */
+.icon-stop:before {
+  content: "\f04d"; }
+
+/* line 85, ../sass/_fonts.scss */
+.icon-forward:before {
+  content: "\f04e"; }
+
+/* line 88, ../sass/_fonts.scss */
+.icon-fast-forward:before {
+  content: "\f050"; }
+
+/* line 91, ../sass/_fonts.scss */
+.icon-step-forward:before {
+  content: "\f051"; }
+
+/* line 94, ../sass/_fonts.scss */
+.icon-chevron-left:before {
+  content: "\f053"; }
+
+/* line 97, ../sass/_fonts.scss */
+.icon-chevron-right:before {
+  content: "\f054"; }
+
+/* line 100, ../sass/_fonts.scss */
+.icon-chevron-up:before {
+  content: "\f077"; }
+
+/* line 103, ../sass/_fonts.scss */
+.icon-chevron-down:before {
+  content: "\f078"; }
+
+/* line 106, ../sass/_fonts.scss */
+.icon-facebook:before {
+  content: "\f09a"; }
+
+/* line 109, ../sass/_fonts.scss */
+.icon-envelope-alt:before {
+  content: "\f0e0"; }
+
+/* line 112, ../sass/_fonts.scss */
+.icon-angle-left:before {
+  content: "\f104"; }
+
+/* line 115, ../sass/_fonts.scss */
+.icon-angle-right:before {
+  content: "\f105"; }
+
+/* line 118, ../sass/_fonts.scss */
+.icon-angle-up:before {
+  content: "\f106"; }
+
+/* line 121, ../sass/_fonts.scss */
+.icon-angle-down:before {
+  content: "\f107"; }
+
+/* line 124, ../sass/_fonts.scss */
+.icon-quote-left:before {
+  content: "\f10d"; }
+
+/* line 127, ../sass/_fonts.scss */
+.icon-quote-right:before {
+  content: "\f10e"; }
+
+/* line 130, ../sass/_fonts.scss */
+.icon-euro:before {
+  content: "\f153"; }
+
+/*	--------------------------------------------------
+	Reveal Modals
+	-------------------------------------------------- */
+/* line 5, ../sass/_reveal.scss */
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: white;
+  opacity: 0.2;
+  z-index: 100;
+  display: none;
+  top: 0;
+  left: 0; }
+
+/* line 17, ../sass/_reveal.scss */
+.reveal-modal {
+  visibility: hidden;
+  top: 100px;
+  left: 50%;
+  margin-left: -300px;
+  width: 520px;
+  background: white;
+  position: absolute;
+  z-index: 101;
+  padding: 30px 40px 34px;
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+
+/* line 32, ../sass/_reveal.scss */
+.reveal-modal.small {
+  width: 200px;
+  margin-left: -140px; }
+
+/* line 33, ../sass/_reveal.scss */
+.reveal-modal.medium {
+  width: 400px;
+  margin-left: -240px; }
+
+/* line 34, ../sass/_reveal.scss */
+.reveal-modal.large {
+  width: 600px;
+  margin-left: -340px; }
+
+/* line 35, ../sass/_reveal.scss */
+.reveal-modal.xlarge {
+  width: 800px;
+  margin-left: -440px; }
+
+/* line 37, ../sass/_reveal.scss */
+.reveal-modal .close-reveal-modal {
+  font-size: 22px;
+  line-height: .5;
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 -1px 1px rbga(0, 0, 0, 0.6);
+  font-weight: bold;
+  cursor: pointer; }
+
+/* line 1, ../sass/_home.scss */
+header {
+  width: 100%;
+  height: 60px;
+  background: #f0d5b8;
+  overflow: hidden; }
+  /* line 6, ../sass/_home.scss */
+  header .icon-angle-right {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    width: 32px;
+    display: block;
+    float: left;
+    margin: 13px 0 0 45px;
+    transition: all 500ms ease-out; }
+    /* line 15, ../sass/_home.scss */
+    header .icon-angle-right:hover, header .icon-angle-right:focus, header .icon-angle-right:visited {
+      color: white; }
+  /* line 19, ../sass/_home.scss */
+  header h1 {
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 2em;
+    color: white;
+    text-transform: uppercase;
+    width: 380px;
+    float: left;
+    padding: 15px 0  0 26px; }
+    /* line 27, ../sass/_home.scss */
+    header h1 a:hover, header h1:focus, header h1:visited {
+      color: white; }
+  /* line 31, ../sass/_home.scss */
+  header .icon-envelope {
+    font-size: 2em;
+    display: block;
+    width: 30px;
+    float: right;
+    margin: 13px 30px; }
+    /* line 37, ../sass/_home.scss */
+    header .icon-envelope:hover {
+      color: #081709; }
+
+/* line 42, ../sass/_home.scss */
+.rotate-on {
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -moz-transform: rotate(90deg);
+  /* Firefox */
+  -webkit-transform: rotate(90deg);
+  /* Safari and Chrome */
+  -o-transform: rotate(90deg);
+  /* Opera */ }
+
+/* line 49, ../sass/_home.scss */
+.rotate-off {
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  /* IE 9 */
+  -moz-transform: rotate(0deg);
+  /* Firefox */
+  -webkit-transform: rotate(0deg);
+  /* Safari and Chrome */
+  -o-transform: rotate(0deg);
+  /* Opera */ }
+
+/* line 56, ../sass/_home.scss */
+nav {
+  width: 100%;
+  height: 30px;
+  background: white; }
+  /* line 60, ../sass/_home.scss */
+  nav ul {
+    margin-left: 10px; }
+    /* line 62, ../sass/_home.scss */
+    nav ul li {
+      float: left;
+      width: 30px;
+      padding: 8px 20px; }
+      /* line 66, ../sass/_home.scss */
+      nav ul li a {
+        color: #2d7326;
+        font-family: 'Quattrocento Sans', sans-serif;
+        font-weight: 700; }
+
+/* line 74, ../sass/_home.scss */
+.page {
+  background: url("../img/yakushima.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+/* line 1, ../sass/_music.scss */
+#songs {
+  width: 100%;
+  position: absolute;
+  line-height: 0;
+  top: 60px;
+  z-index: -2; }
+  /* line 7, ../sass/_music.scss */
+  #songs .song {
+    width: 25%;
+    float: left;
+    position: relative;
+    transition: all 500ms ease-in-out; }
+    /* line 12, ../sass/_music.scss */
+    #songs .song img {
+      width: 100%; }
+    /* line 15, ../sass/_music.scss */
+    #songs .song .controls {
+      width: 100%;
+      height: 100%; }
+    /* line 19, ../sass/_music.scss */
+    #songs .song .play {
+      width: 0;
+      height: 0;
+      border-top: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+      border-left: 75px solid white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      margin: -12.5% 0 0 -12.5%;
+      opacity: 0.5;
+      transition: all 500ms ease-out; }
+      /* line 32, ../sass/_music.scss */
+      #songs .song .play:hover {
+        opacity: 0.8; }
+    /* line 36, ../sass/_music.scss */
+    #songs .song .playing {
+      width: 25%;
+      height: 25%;
+      background-color: white;
+      border-top: 0 solid transparent;
+      border-bottom: 0 solid transparent;
+      border-left: 0 solid white;
+      z-index: 10; }
+    /* line 45, ../sass/_music.scss */
+    #songs .song .title {
+      font-family: 'Quattrocento Sans', sans-serif;
+      font-size: 1em;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      bottom: 10px; }
+    /* line 57, ../sass/_music.scss */
+    #songs .song .overbox {
+      width: 100%;
+      height: 100%;
+      background-color: #f0d5b8;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0; }
+
+/* line 1, ../sass/_about.scss */
+#about {
+  width: 100%;
+  height: 175%;
+  background: url(../img/about.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+  /* line 12, ../sass/_about.scss */
+  #about #text-wrap {
+    font-family: 'Quattrocento Sans', sans-serif;
+    color: #081709;
+    width: 60%;
+    padding: 20px 5% 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 0;
+    left: 15%; }
+    /* line 21, ../sass/_about.scss */
+    #about #text-wrap h2 {
+      color: black;
+      font-size: 2.5em;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 2em; }
+    /* line 28, ../sass/_about.scss */
+    #about #text-wrap p {
+      line-height: 2em; }
+  /* line 32, ../sass/_about.scss */
+  #about .overbox {
+    width: 100%;
+    height: 100%;
+    background-color: #f0d5b8;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0; }
