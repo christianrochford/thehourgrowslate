@@ -4,12 +4,11 @@
 	<meta charset="UTF-8">
 	<title>The Hour Grows Late</title>
 	<link rel="stylesheet" href="stylesheets/screen.css">
-	<link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700|Quattrocento+Sans:400,700' rel='stylesheet' type='text/css'>
 	<script src="js/modernizr.js"></script>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
 </head>
-<body>
+<body class="about">
 	<header>
 		<a href="#" class="icon-angle-right" arial-true="hidden"></a>
 		<h1><a href="index.html">The Hour Grows Late</a></h1>
@@ -24,38 +23,28 @@
 				</ul>
 			</nav>
 		</div>
-	
+
 	<section id="about">
-		<div id="text-wrap">
-			<h2>About The Hour Grows Late</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, exercitationem, fuga asperiores laborum odit aspernatur possimus debitis dolor placeat error totam eius consequatur repellat at ex unde recusandae ipsum deleniti?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio ea et beatae magnam eaque accusantium assumenda debitis aliquam repudiandae? Repellendus atque quibusdam vero vel distinctio omnis voluptatibus inventore corporis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, dolor, odit, saepe, earum sit perspiciatis iusto repellendus nulla molestiae consectetur magni assumenda natus quasi quo quibusdam laboriosam optio voluptates aspernatur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quibusdam, beatae, hic, ipsa asperiores porro ratione quae facere pariatur deserunt voluptatibus aliquid commodi corporis rem voluptatum ipsam itaque expedita dolore.</p>
+		<div id="video">
+			<video autoplay preload width="640" height="360" loop="loop" tabindex="0">
+				<source src="video/earrach.webm" type="video/webm" />
+				<source src="video/earrach.ogv" type="video/ogg" />
+				<source src="video/earrach.mp4" type="video/mp4" />
+			</video>
+		</div>
+		<div id="about-text">
+			<div id="text-wrap">
+				<h2>About This Late Hour</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, exercitationem, fuga asperiores laborum odit aspernatur possimus debitis dolor placeat error totam eius consequatur repellat at ex unde recusandae ipsum deleniti?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio ea et beatae magnam eaque accusantium assumenda debitis aliquam repudiandae? Repellendus atque quibusdam vero vel distinctio omnis voluptatibus inventore corporis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, dolor, odit, saepe, earum sit perspiciatis iusto repellendus nulla molestiae consectetur magni assumenda natus quasi quo quibusdam laboriosam optio voluptates aspernatur? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quibusdam, beatae, hic, ipsa asperiores porro ratione quae facere pariatur deserunt voluptatibus aliquid commodi corporis rem voluptatum ipsam itaque expedita dolore.</p>
+			</div>
 		</div>
 		<div class="overbox"></div>
+		<a href="#" class="icon-volume-off" arial-true="hidden"></a>
+		<a href="#" class="icon-volume-up" arial-true="hidden"></a>
 	</section>
 	
 	<script src="js/jquery-2.0.3.min.js"></script>
-	<script>
-
-	$(document).ready(function(){
-		
-		var menu = $('.icon-angle-right');
-		$('nav').hide();
-		$(menu).click(function(){
-			$('nav').slideToggle('slow', function(){
-				if($(menu).hasClass('rotate-on')){
-					$(menu).removeClass('rotate-on');
-					$(menu).addClass('rotate-off');
-				} else if($(menu).hasClass('rotate-off')){
-					$(menu).removeClass('rotate-off');
-					$(menu).addClass('rotate-on');
-				} else {
-					$(menu).addClass('rotate-on');
-				}
-				});
-			});
-		});
-
-	</script>
+	<script src="js/app.js"></script>
 
 </body>
 </html>

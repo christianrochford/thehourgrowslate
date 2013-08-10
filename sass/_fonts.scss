@@ -1,3 +1,43 @@
+/*/////////////
+	Type Fonts
+/////////////*/
+
+@font-face {
+    font-family: 'bonvenocflight';
+    src: url('../fonts/BonvenoCF-Light-webfont.eot');
+    src: url('../fonts/BonvenoCF-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/BonvenoCF-Light-webfont.woff') format('woff'),
+         url('../fonts/BonvenoCF-Light-webfont.ttf') format('truetype'),
+         url('../fonts/BonvenoCF-Light-webfont.svg#bonvenocflight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'droid_serifregular';
+    src: url('../fonts/DroidSerif-webfont.eot');
+    src: url('../fonts/DroidSerif-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSerif-webfont.woff') format('woff'),
+         url('../fonts/DroidSerif-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSerif-webfont.svg#droid_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'droid_serifbold';
+    src: url('../fonts/DroidSerif-Bold-webfont.eot');
+    src: url('../fonts/DroidSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSerif-Bold-webfont.woff') format('woff'),
+         url('../fonts/DroidSerif-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSerif-Bold-webfont.svg#droid_serifbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*///////////
+	Icons
+///////////*/
 @font-face {
 	font-family: 'fontawesome';
 	src:url('../fonts/fontawesome.eot');

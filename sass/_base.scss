@@ -1,9 +1,11 @@
-body{
+html, body{
+	font-family: 'bonvenocflight', sans-serif;
 	background: $background;
 }
 a{
 	text-decoration: none;
 	color: $white;
+	transition: all 500ms ease-out;
 	&:hover{
 		color: $darkgreen;
 	}
