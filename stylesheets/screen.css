@@ -61,7 +61,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 1, ../sass/_base.scss */
 html, body {
   font-family: 'bonvenocflight', sans-serif;
-  background: #f0d5b8; }
+  background: black; }
 
 /* line 5, ../sass/_base.scss */
 a {
@@ -253,12 +253,199 @@ you can use the generic selector below, but it's slower:
 .icon-euro:before {
   content: "\f153"; }
 
+/* line 1, ../sass/_structure-vertical.scss */
+.sc-player {
+  font-family: 'bonvenocflight', sans-serif;
+  background-color: white;
+  color: #081709;
+  font-size: 0.7em;
+  line-height: 1.4em;
+  width: 20%;
+  min-width: 300px;
+  height: 100%;
+  padding-top: 60px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; }
+
+/* line 18, ../sass/_structure-vertical.scss */
+.sc-player ol, .sc-player li {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; }
+
+/* line 24, ../sass/_structure-vertical.scss */
+.sc-player a {
+  text-decoration: none;
+  color: #081709; }
+
+/* Artworks */
+/* line 31, ../sass/_structure-vertical.scss */
+.sc-player .sc-artwork-list {
+  width: 100%;
+  height: 44%;
+  background-color: black;
+  list-style-type: none;
+  position: relative; }
+
+/* line 39, ../sass/_structure-vertical.scss */
+.sc-player .sc-artwork-list li {
+  list-style-type: none;
+  display: none; }
+
+/* line 44, ../sass/_structure-vertical.scss */
+.sc-player .sc-artwork-list li.active {
+  list-style-type: none;
+  display: block; }
+
+/* line 49, ../sass/_structure-vertical.scss */
+.sc-player .sc-artwork-list li img, .sc-player .sc-artwork-list li div {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* Firefox 10+, Firefox on Android */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+  -webkit-filter: contrast(110%); }
+
+/* controls */
+/* line 61, ../sass/_structure-vertical.scss */
+.sc-player .sc-controls {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  top: 25%;
+  left: 50%; }
+
+/* line 71, ../sass/_structure-vertical.scss */
+.sc-player .sc-controls a {
+  display: block;
+  color: white;
+  font-size: 8em;
+  opacity: 0.6; }
+
+/* line 78, ../sass/_structure-vertical.scss */
+.sc-player .sc-controls a:hover {
+  opacity: 0.8; }
+
+/* line 82, ../sass/_structure-vertical.scss */
+.sc-player .sc-controls a.sc-pause {
+  position: relative;
+  left: -10px;
+  display: none; }
+
+/* line 88, ../sass/_structure-vertical.scss */
+.sc-player.playing .sc-controls a.sc-play {
+  display: none; }
+
+/* line 92, ../sass/_structure-vertical.scss */
+.sc-player.playing .sc-controls a.sc-pause {
+  display: block; }
+
+/* scrubber */
+/* line 98, ../sass/_structure-vertical.scss */
+.sc-scrubber {
+  background-color: black;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 46%;
+  width: 100%;
+  height: 28px; }
+
+/* line 108, ../sass/_structure-vertical.scss */
+.sc-scrubber .sc-time-indicators {
+  background: black;
+  color: white;
+  padding: 4px;
+  position: absolute;
+  right: 0;
+  top: 0px; }
+
+/* volume control */
+/* line 118, ../sass/_structure-vertical.scss */
+.sc-volume-slider {
+  top: 8px;
+  left: 3px;
+  position: absolute;
+  width: 110px;
+  height: 12px;
+  background-color: white; }
+
+/* line 126, ../sass/_structure-vertical.scss */
+.sc-volume-slider .sc-volume-status {
+  background-color: #d4d4d4;
+  border-right: 1px solid #081709;
+  position: absolute;
+  width: 0%;
+  height: 10px;
+  top: 1px;
+  left: 1px; }
+
+/* tracks */
+/* Track listings*/
+/* line 141, ../sass/_structure-vertical.scss */
+.sc-player ol.sc-trackslist {
+  position: absolute;
+  float: left;
+  width: 100%;
+  height: 50%;
+  top: 50%;
+  left: 0;
+  overflow: auto; }
+
+/* line 151, ../sass/_structure-vertical.scss */
+.sc-player ol.sc-trackslist li {
+  background: white;
+  color: #081709;
+  -webkit-transition: background 0.3s ease-in;
+  float: left;
+  width: 90%;
+  cursor: pointer;
+  margin: 0;
+  padding: 5%; }
+  /* line 160, ../sass/_structure-vertical.scss */
+  .sc-player ol.sc-trackslist li span {
+    float: right; }
+
+/* line 165, ../sass/_structure-vertical.scss */
+.sc-player ol.sc-trackslist li:hover {
+  background: #d4d4d4; }
+
+/* line 169, ../sass/_structure-vertical.scss */
+.sc-player ol.sc-trackslist li.active {
+  background: #d4d4d4; }
+
+/* line 173, ../sass/_structure-vertical.scss */
+.sc-player ol.sc-trackslist li.active a {
+  color: #081709; }
+
+/* utilities */
+/* line 179, ../sass/_structure-vertical.scss */
+.sc-player .hidden {
+  display: none; }
+
+/* line 183, ../sass/_structure-vertical.scss */
+.sc-player-engine-container {
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  top: 2px;
+  left: 2px; }
+
 /* line 1, ../sass/_header.scss */
 header {
   font-family: 'bonvenocflight', sans-serif;
   width: 100%;
   height: 60px;
-  background: #f0d5b8;
+  background: black;
   overflow: hidden;
   position: relative;
   z-index: 1; }
@@ -338,21 +525,26 @@ nav {
   z-index: 1; }
   /* line 71, ../sass/_header.scss */
   nav ul {
-    margin-left: 30px; }
-    /* line 73, ../sass/_header.scss */
+    width: 30%;
+    margin-left: 100px; }
+    /* line 74, ../sass/_header.scss */
     nav ul li {
       float: left;
-      width: 30px;
-      padding: 8px 73px; }
+      width: 33.3333%; }
       /* line 77, ../sass/_header.scss */
       nav ul li a {
-        color: #2d7326;
+        display: block;
+        width: 100%;
+        height: 14px;
+        padding: 8px 0;
+        color: black;
         font-family: 'bonvenocflight', sans-serif;
         font-size: 14px;
         transition: all 0.5s ease-in-out; }
-        /* line 82, ../sass/_header.scss */
+        /* line 86, ../sass/_header.scss */
         nav ul li a:hover {
-          color: black; }
+          background-color: black;
+          color: white; }
 
 /* line 2, ../sass/_home.scss */
 .page {
@@ -360,6 +552,12 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 100%;
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* Firefox 10+, Firefox on Android */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+, Safari 6+, Safari 6+ iOS */
   position: absolute;
   top: 0;
   left: 0;
@@ -368,85 +566,26 @@ nav {
   z-index: -1; }
 
 /* line 1, ../sass/_music.scss */
-#song-wrapper {
-  width: 100%;
+.music {
   height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
-  left: 0;
-  z-index: -2; }
-
-/* line 9, ../sass/_music.scss */
-#songs {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-  /* line 13, ../sass/_music.scss */
-  #songs .song {
-    width: 12.5%;
-    float: left;
-    position: relative;
-    transition: all 500ms ease-in-out; }
-    /* line 19, ../sass/_music.scss */
-    #songs .song .controls {
-      width: 100%;
-      height: 100%; }
-    /* line 23, ../sass/_music.scss */
-    #songs .song .play {
-      width: 0;
-      height: 0;
-      border-top: 25px solid transparent;
-      border-bottom: 25px solid transparent;
-      border-left: 37.5px solid white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      z-index: 10;
-      margin: -12.5% 0 0 -12.5%;
-      opacity: 0.5;
-      transition: all 500ms ease-out; }
-      /* line 36, ../sass/_music.scss */
-      #songs .song .play:hover {
-        opacity: 0.8; }
-    /* line 40, ../sass/_music.scss */
-    #songs .song .playing {
-      width: 20px;
-      height: 20px;
-      background-color: white;
-      border-top: 0 solid transparent;
-      border-bottom: 0 solid transparent;
-      border-left: 0 solid white;
-      top: 25%;
-      left: 17%;
-      z-index: 10; }
-    /* line 51, ../sass/_music.scss */
-    #songs .song .title {
-      font-family: 'bonvenocflight', sans-serif;
-      font-size: 1em;
-      color: white;
-      text-align: center;
-      text-transform: lowercase;
-      background-color: rgba(240, 213, 184, 0.8);
-      display: block;
-      width: 100%;
-      height: 15px;
-      margin-top: 60px;
-      padding: 7px 0;
-      position: absolute;
-      left: 0;
-      top: 0; }
-    /* line 67, ../sass/_music.scss */
-    #songs .song .overbox {
-      width: 100%;
-      height: 100%;
-      background-color: #f0d5b8;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      left: 0; }
-  /* line 77, ../sass/_music.scss */
-  #songs .expand {
-    width: 50%; }
+  left: 0; }
+  /* line 7, ../sass/_music.scss */
+  .music .player-wrap {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  /* line 14, ../sass/_music.scss */
+  .music .song-image {
+    width: 80%;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+    margin-top: -60px; }
 
 /* line 1, ../sass/_about.scss */
 #about {
@@ -460,22 +599,28 @@ nav {
     position: absolute;
     top: 0;
     overflow: hidden;
-    z-index: -1; }
-  /* line 13, ../sass/_about.scss */
+    z-index: -1;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+    /* Firefox 10+, Firefox on Android */
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+, Safari 6+, Safari 6+ iOS */ }
+  /* line 16, ../sass/_about.scss */
   #about .overbox {
     width: 100%;
     height: 100%;
-    background-color: #f0d5b8;
+    background-color: black;
     opacity: 0.3;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0; }
-  /* line 23, ../sass/_about.scss */
+  /* line 26, ../sass/_about.scss */
   #about #about-text {
     width: 100%;
     height: 100%; }
-    /* line 26, ../sass/_about.scss */
+    /* line 29, ../sass/_about.scss */
     #about #about-text #text-wrap {
       font-family: 'bonvenocflight', sans-serif;
       color: #081709;
@@ -489,7 +634,7 @@ nav {
       /* Opera/IE 8+ */
       padding: 20px 15% 0;
       background-color: rgba(255, 255, 255, 0.5); }
-      /* line 36, ../sass/_about.scss */
+      /* line 39, ../sass/_about.scss */
       #about #about-text #text-wrap h2 {
         color: white;
         font-size: 2em;
@@ -497,12 +642,12 @@ nav {
         text-transform: uppercase;
         line-height: 3em;
         margin-top: 150px; }
-      /* line 44, ../sass/_about.scss */
+      /* line 47, ../sass/_about.scss */
       #about #about-text #text-wrap p {
         font-family: 'droid_serifregular', serif;
         line-height: 2em;
         text-align: center; }
-  /* line 51, ../sass/_about.scss */
+  /* line 54, ../sass/_about.scss */
   #about .icon-volume-off, #about .icon-volume-up {
     font-size: 2em;
     display: block;
@@ -511,13 +656,13 @@ nav {
     right: 20px;
     bottom: 10px;
     transition: all 0.5s ease-in-out; }
-    /* line 59, ../sass/_about.scss */
+    /* line 62, ../sass/_about.scss */
     #about .icon-volume-off:hover, #about .icon-volume-up:hover {
-      color: #2d7326; }
-  /* line 63, ../sass/_about.scss */
+      color: black; }
+  /* line 66, ../sass/_about.scss */
   #about .icon-volume-up {
     display: none; }
-  /* line 66, ../sass/_about.scss */
+  /* line 69, ../sass/_about.scss */
   #about .icon-volume-up.active {
     display: block; }
 
@@ -538,7 +683,7 @@ nav {
 .overbox {
   width: 100%;
   height: 100%;
-  background-color: #f0d5b8;
+  background-color: black;
   opacity: 0.5;
   position: absolute;
   top: 0;

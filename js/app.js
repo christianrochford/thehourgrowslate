@@ -18,47 +18,6 @@ $(document).ready(function(){
 		});
 	});
 
-// show controls
-		$('.controls').hide();
-		$('.song').hover(
-			function(){
-				$(this).find('.overbox').fadeOut(500);
-				$(this).find('.controls').fadeIn(500);
-			}, 
-			function(){
-				$(this).find('.overbox').fadeIn(500);
-				$(this).find('.controls').fadeOut(500);
-		});
-
-		//music player
-		$('.play').click(function(e){
-			e.preventDefault();
-			// declare variable for audio tracks
-			var mySong = new Audio(
-				'audio/' + $(this).attr('id') + '.ogg', 
-				'audio/' + $(this).attr('id') + '.mp3'
-				);
-			// choose correct audio format for browser
-			if (mySong.canPlayType('audio/mpeg;')) {
-			    mySong.type= 'audio/mpeg';
-			    mySong.src= 'audio/' + $(this).attr('id') + '.ogg';
-			} else {
-			    mySong.type= 'audio/ogg';
-			    mySong.src= 'audio/' + $(this).attr('id') + '.ogg';
-			}
-			// audio control actions
-			if($('.play').hasClass('playing')){
-				$(this).closest('.song').removeClass('expand');
-				$('audio').pause();
-				$('audio').currentTime = 0;
-				$(this).removeClass('playing');
-			} else {
-				$(this).closest('.song').addClass('expand');
-				$('.play').removeClass('playing');
-				$(this).addClass('playing');
-				mySong.play();
-			}
-		});
 
 // Resize Video to fill background
 

@@ -4,136 +4,38 @@
 	<meta charset="UTF-8">
 	<title>The Hour Grows Late</title>
 	<link rel="stylesheet" href="stylesheets/screen.css">
+	<link rel="stylesheet" href="stylesheets/sc-player-standard.css" type="text/css">
 	<script src="js/modernizr.js"></script>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<!--[if lte IE 7]><script src="js/lte-ie7.js"></script><![endif]-->
 </head>
-<body>
+<body class="music">
 	<header>
 		<a href="#" class="icon-angle-right" arial-true="hidden"></a>
 		<h1><a href="index.html">The Hour Grows Late</a></h1>
 		<a href="mailto:rochfordchristian@gmail.com" class="icon-envelope" arial-true="hidden"></a>
 	</header>
 	<div class="nav-wrap">
-			<nav>
-				<ul>
-					<li><a href="music.html">music</a></li>
-					<li><a href="about.html">about</a></li>
-					<li><a href="shop.html">shop</a></li>
-				</ul>
-			</nav>
-		</div>
-	
-	<div id="song-wrapper">
-		<div id="songs">
-			<div class="song">
-				<img src="img/chairs.jpg" alt="chairs">
-				<div class="controls">
-					<a href="#" id="fomhar" class="play" ></a>
-					<span class="title">F&oacute;mhar</span>
-					<audio preload="none">
-	  					<source src="audio/fomhar.ogg" type="audio/ogg">
-						<source src="audio/fomhar.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
-				</div>
-				<div class="overbox"></div>
-			</div>
-			<div class="song">
-				<img src="img/hanoi.jpg" alt="hanoi">
-				<div class="controls">
-					<a href="#" id="gaoithe" class="play"></a>
-					<span class="title">Gaoithe</span>
-					<audio preload="none">
-	  					<source src="audio/gaoithe.ogg" type="audio/ogg">
-						<source src="audio/gaoithe.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
-				</div>	
-				<div class="overbox"></div>
-			</div>
-			<div class="song">
-				<img src="img/hilltop.jpg" alt="hilltop">
-				<div class="controls">
-					<a href="#" id="baisteach" class="play"></a>
-					<span class="title">B&aacute;isteach</span>
-					<audio preload="none">
-	  					<source src="audio/baisteach.ogg" type="audio/ogg">
-						<source src="audio/baisteach.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
-				</div>
-				<div class="overbox"></div>
-			</div>
-			<div class="song">
-				<img src="img/kaido.jpg" alt="shimanami kaido">
-				<div class="controls">
-					<a href="#" id="walkup" class="play"></a>
-					<span class="title">Walk-Up</span>
-					<audio preload="none">
-	  					<source src="audio/walkup.ogg" type="audio/ogg">
-						<source src="audio/walkup.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
-				</div>
-				<div class="overbox"></div>
-			</div>
-			<div class="song">
-				<img src="img/lanyu.jpg" alt="lan yu">
-				<div class="controls">
-					<a href="#" id="earrach" class="play"></a>
-					<span class="title">Earrach</span>
-					<audio preload="none">
-	  					<source src="audio/earrach.ogg" type="audio/ogg">
-						<source src="audio/earrach.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
-				</div>
-				<div class="overbox"></div>
-			</div>
-			<div class="song">
-				<img src="img/leafs.jpg" alt="leaves">
-				<div class="controls">
-					<a href="#" id="samhradh" class="play"></a>
-					<span class="title">Samhradh</span>
-					<audio preload="none">
-	  					<source src="audio/samhradh.ogg" type="audio/ogg">
-						<source src="audio/samhradh.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
-				</div>
-				<div class="overbox"></div>
-			</div>
-			<div class="song">
-				<img src="img/ohayo.jpg" alt="ohayo">
-				<div class="controls">
-					<a href="#" id="grian" class="play"></a>
-					<span class="title">Grian</span>
-					<audio preload="none">
-	  					<source src="audio/grian.ogg" type="audio/ogg">
-						<source src="audio/grian.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
-				</div>	
-				<div class="overbox"></div>
-			</div>
-			<div class="song">
-				<img src="img/road.jpg" alt="road">
-				<div class="controls">
-					<a href="#" id="geimhreadh" class="play"></a>
-					<span class="title">Geimhreadh</span>
-					<audio preload="none">
-	  					<source src="audio/geimhreadh.ogg" type="audio/ogg">
-						<source src="audio/geimhreadh.mp3" type="audio/mpeg">
-						Your browser does not support the audio element.
-					</audio>
-				</div>
-				<div class="overbox"></div>
-			</div>
-		</div>
+		<nav>
+			<ul>
+				<li><a href="music.html">music</a></li>
+				<li><a href="about.html">about</a></li>
+				<li><a href="shop.html">shop</a></li>
+			</ul>
+		</nav>
 	</div>
-
+	
+	<div class="player-wrap">
+		<a href="http://soundcloud.com/thehourgrowslate" class="sc-player">Tracks
+		</a>
+	</div>
+	<div class="song-image">
+		<img src="img/shop.png" alt="">
+	</div>
+	
 	<script src="js/jquery-2.0.3.min.js"></script>
+	<script src="js/soundcloud.player.api.js"></script>
+	<script src="js/sc-player.js"></script>
 	<script src="js/app.js"></script>
 	
 
