@@ -488,6 +488,7 @@
         $player = $('<div class="sc-player loading"></div>').data('sc-player', {id: playerId}),
         $artworks = $('<ol class="sc-artwork-list"></ol>').appendTo($player),
         $controls = $('<div class="sc-controls"></div>').appendTo($player),
+        $scrubber = $('<div class="sc-scrubber"></div>').appendTo($player),
         $list = $('<ol class="sc-trackslist"></ol>').appendTo($player);
 
         // add the classes of the source node to the player itself
@@ -502,7 +503,6 @@
           .find('.sc-controls')
             .append('<a href="#play" class="sc-play icon-play"></a> <a href="#pause" class="sc-pause hidden icon-pause"></a>')
           .end()
-          .append('<div class="sc-scrubber"></div>')
             .find('.sc-scrubber')
               .append('<div class="sc-volume-slider"><span class="sc-volume-status" style="width:' + soundVolume +'%"></span></div>')
               .append('<div class="sc-time-indicators"><span class="sc-position"></span> | <span class="sc-duration"></span></div>');

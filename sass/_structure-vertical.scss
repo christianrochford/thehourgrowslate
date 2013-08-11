@@ -1,18 +1,13 @@
 .sc-player{
   font-family: 'bonvenocflight', sans-serif;
-  background-color: $white;
+  background-color: $black;
   color: $darkgreen;
   font-size: 0.7em;
   line-height: 1.4em;
-  width: 20%;
-  min-width: 300px;
+  width: 100%;
   height: 100%;
-  padding-top: 60px;
   box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
+  float: left;
 }
 
 .sc-player ol, .sc-player li{
@@ -29,11 +24,11 @@
 /* Artworks */
 
 .sc-player .sc-artwork-list{
-  width: 100%;
-  height: 44%;
   background-color: $black;
   list-style-type: none;
-  position: relative;
+  width: 100%;
+  height: 50%;
+  float: left;
 }
 
 .sc-player .sc-artwork-list li{
@@ -51,21 +46,19 @@
   width: 100%;
   height: 100%;
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-    filter: gray; /* IE6-9 */
-    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
-    -webkit-filter: contrast(110%);
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+  -webkit-filter: contrast(110%);
 }
 
 /* controls */
 
 .sc-player .sc-controls{
-  position: absolute;
   width: 50px;
   height: 50px;
-  margin-left: -25px;
-  margin-top: -25px;
-  top: 25%;
-  left: 50%;
+  float: left;
+  margin-left: 125px;
+  margin-top: -70%;
 }
 
 .sc-player .sc-controls a{
@@ -80,8 +73,6 @@
 }
 
 .sc-player .sc-controls a.sc-pause{
-  position: relative;
-  left: -10px;
   display: none;
 }
 
@@ -98,30 +89,26 @@
 .sc-scrubber {
   background-color: $black;
   display: block;
-  position: absolute;
-  left: 0;
-  top: 46%;
   width: 100%;
   height: 28px;
+  float: left;
 }
 
 .sc-scrubber .sc-time-indicators{
   background: $black;
   color: $white;
-  padding: 4px;
-  position: absolute;
-  right: 0;
-  top: 0px;
+  padding: 3px 6px;
+  float: right;
 }
 
 /* volume control */
 .sc-volume-slider {
-  top: 8px;
-  left: 3px;
-  position: absolute;
+  background-color: $white;
   width: 110px;
   height: 12px;
-  background-color: $white;
+  float: left;
+  margin: 6px 2px;
+  position: relative;
 }
 .sc-volume-slider .sc-volume-status{
   background-color: $player;
@@ -139,12 +126,10 @@
 /* Track listings*/
 
 .sc-player ol.sc-trackslist{
-  position: absolute;
-  float: left;
+  background-color: $white;
   width: 100%;
   height: 50%;
-  top: 50%;
-  left: 0;
+  float: left;
   overflow: auto;
 }
 
@@ -156,7 +141,7 @@
   width: 90%;
   cursor: pointer;
   margin: 0;
-  padding: 5%;
+  padding: 3% 5%;
   span{
     float: right;
   }
